@@ -1,0 +1,24 @@
+p {
+    color: green;
+}
+
+h1 {
+    color: darkred;
+}
+
+.destacado {
+    color: goldenrod;
+}
+
+/* section p.primer-parrafo { */
+.primer-parrafo {
+    border: solid;
+}
+
+h2.destacado {
+    color: blue;
+}
+
+#titulo {
+    color: violet;
+}

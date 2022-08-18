@@ -1,0 +1,15 @@
+p { /* 1 */
+    color: red;
+}
+
+p { /* 1 */
+    color: violet;
+}
+
+.destacado { /* 10 */
+    color: green;
+}
+
+#parrafo { /* 100 */
+    color: blue;
+}
