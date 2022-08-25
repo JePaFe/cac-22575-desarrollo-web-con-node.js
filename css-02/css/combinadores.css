@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto&display=swap');
+
+p {
+    color: rgb(230, 38, 38);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

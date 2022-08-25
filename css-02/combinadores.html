@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 02</title>
+    <link rel="stylesheet" href="css/combinadores.css">
+    <style>
+        p {
+            color: greenyellow;
+        }
+        .seccion-2 > p {
+            color: red;
+        }
+        h2 ~ p {
+            color: green;
+        }
+        .seccion.active {
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS 02</h1>
+    </header>
+    <main>
+        <p>Lorem, ipsum dolor.</p>
+        <section>
+            <h2 class="seccion">Seccion 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="segundoParrafo" id="id-segundo">Lorem ipsum dolor sit amet.</p>
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit.</p>
+        </section>
+        <section class="seccion active seccion-2">
+            <h2>Seccion 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <p>Lorem, ipsum dolor.</p>
+        </section>
+        <section class="seccion" id="seccion-3">
+            <h2>Seccion 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="seccion-parrafo">Lorem ipsum dolor sit amet.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022</p>
+    </footer>
+</body>
+</html>

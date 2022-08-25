@@ -1,0 +1,25 @@
+/* (id, class, elemento) */
+
+p { /* (0, 0, 1) */
+    color: red;
+}
+
+.segundoParrafo { /* (0, 1, 0) */
+    color: green;
+}
+
+#id-segundo { /* (1, 0, 0) */
+    color: blue;
+}
+
+section p { /* (0, 0, 2) */
+    color: violet;
+}
+
+.seccion-2 p { /* (0, 1, 1) */
+    color: brown;
+}
+
+#seccion-3 .seccion-parrafo { /* (1, 1, 0) */
+    color: goldenrod;
+}

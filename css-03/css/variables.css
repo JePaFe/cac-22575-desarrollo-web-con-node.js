@@ -1,0 +1,13 @@
+body {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+p.detacado {
+    color: #333;
+}
+
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
