@@ -1,0 +1,56 @@
+body {
+    background-color: gray;
+}
+.containter {
+    color: white;
+    background-color: lightyellow;
+    border: 1px solid black;
+    padding: .5em;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* flex-flow: row wrap; */
+    /* gap: 2em 4em; */
+    justify-content: flex-start;
+}
+.item {
+    border: 1px solid black;
+    padding: .5em;
+    margin: .5em;
+    /* display: inline-block; */
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.item-1 {
+    background-color: blue;
+    width: 150px;
+    /* flex-grow: 1; */
+    flex-basis: 75px;
+    /* flex: 1; */
+}
+.item-2 {
+    background-color: green;
+    width: 100px;
+}
+.item-3 {
+    background-color: red;
+    height: 100px;
+    /* flex-grow: 2; */
+}
+.item-4 {
+    background-color: violet;
+    width: 200px;
+    /* float: right; */
+}
+.item-5 {
+    background-color: brown;
+    width: 150px;
+    height: 100px;
+    /* float: right; */
+}
+.item-6 {
+    background-color: goldenrod;
+    width: 250px;
+    /* clear: both; */
+    flex-shrink: 10;
+}
