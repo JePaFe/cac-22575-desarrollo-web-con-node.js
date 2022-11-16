@@ -1,0 +1,12 @@
+const express = require("express");
+const router = express.Router();
+
+module.exports = router;
+
+router.get("/", (req, res) => {
+  res.render("index");
+});
+
+router.get("/quienes-somos", (req, res) => {
+  res.send("Quienes somos");
+});

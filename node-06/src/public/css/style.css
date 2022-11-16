@@ -1,0 +1,26 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 100px 40px 1fr 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0 1em;
+}
+
+nav li {
+  /* margin-right: 1em; */
+}
+
+header {
+  background-color: red;
+}
+
+footer {
+  background-color: green;
+}
