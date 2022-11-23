@@ -12,10 +12,20 @@
     />
   </head>
   <body>
-    <%- include('partials/nav') %>
+    <%- include('../partials/nav') %>
 
     <div class="container">
-      <h1>CRUD</h1>
+      <h1>Nueva Noticia</h1>
+
+      <form action="/noticias/store" method="post">
+        <div class="mb-3 row">
+          <label for="titulo" class="col-sm-2 col-form-label">Titulo</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="titulo" id="titulo" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
     </div>
 
     <script
