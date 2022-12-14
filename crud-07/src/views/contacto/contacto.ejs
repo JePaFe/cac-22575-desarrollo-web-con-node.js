@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <h1>Contacto</h1>
+
+    <% if (typeof errors != 'undefined') { %>
+    <ul>
+      <% errors.forEach(error => { %>
+      <li><strong><%= error.param %>: </strong><%= error.msg %></li>
+      <% }) %>
+    </ul>
+    <% } %>
+
+    <form action="/contacto" method="post">
+      <div>
+        <label for="nombre">Nombre: </label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          value="<%= values.nombre %>"
+        />
+      </div>
+      <div>
+        <label for="correo">Correo: </label>
+        <input
+          type="email"
+          name="correo"
+          id="correo"
+          value="<%= values.correo %>"
+        />
+      </div>
+      <div>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad" min="18" value="<%= values.edad %>" />
+      </div>
+      <div>
+        <label for="mensaje">Mensaje: </label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10">
+<%= values.mensaje %></textarea
+        >
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
