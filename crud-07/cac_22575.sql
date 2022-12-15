@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `categorias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Volcando datos para la tabla cac_22575.categorias: ~8 rows (aproximadamente)
+DELETE FROM `categorias`;
 INSERT INTO `categorias` (`id`, `nombre`) VALUES
 	(1, 'Categoria 1'),
 	(2, 'Categoria 3'),
@@ -41,14 +42,15 @@ INSERT INTO `categorias` (`id`, `nombre`) VALUES
 CREATE TABLE IF NOT EXISTS `noticias` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `titulo` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `imagen` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `contenido` text COLLATE utf8mb4_general_ci NOT NULL,
+  `imagen` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `contenido` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Volcando datos para la tabla cac_22575.noticias: ~4 rows (aproximadamente)
+DELETE FROM `noticias`;
 INSERT INTO `noticias` (`id`, `titulo`, `imagen`, `contenido`, `createdAt`, `updatedAt`) VALUES
 	(1, 'Noticia 1', NULL, '', '2022-11-28 14:47:35', '2022-11-28 14:47:35'),
 	(2, 'Noticias 2', NULL, '', '2022-11-28 14:48:12', '2022-11-28 14:48:12'),
@@ -69,10 +71,26 @@ CREATE TABLE IF NOT EXISTS `productos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Volcando datos para la tabla cac_22575.productos: ~3 rows (aproximadamente)
+DELETE FROM `productos`;
 INSERT INTO `productos` (`id`, `nro_producto`, `nombre`, `descripcion`, `promo`, `categoria_id`) VALUES
 	(1, 'ABC123', 'Prod 1', '...', 0, 1),
 	(2, 'ABC321', 'Prod 4', '...', 1, 3),
 	(3, 'eweqewq', 'ewew', 'ewewew', 0, 1);
+
+-- Volcando estructura para tabla cac_22575.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Volcando datos para la tabla cac_22575.users: ~1 rows (aproximadamente)
+DELETE FROM `users`;
+INSERT INTO `users` (`id`, `email`, `password`) VALUES
+	(6, 'x@x.com', '$2a$08$Nleh.5VYzr9cLmDfcVvEN.DO8/5t.1bWG6NbcYcP4Syx1ewX91C1C'),
+	(7, 'x@x.com.ar', '$2a$08$/BGSyViwlvbxgHa65kVImeJLsFVOag0jXAoy0hS254v0IHrguUGjS');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
